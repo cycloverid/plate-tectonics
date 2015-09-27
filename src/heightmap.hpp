@@ -70,9 +70,9 @@ public:
     }
 	void copy(const Matrix& other) 
 	{
+		_width = other._width;
+		_height = other._height;
 		if (_area != other._area) {
-			_width = other._width;
-			_height = other._height;
 			_area = other._area;
 			delete[] _data;
 			_data = new Value[_area];
